@@ -30,3 +30,6 @@ USER api:api
 
 # Define entrypoint for container
 ENTRYPOINT ["./apiserver"]
+
+# HealthCheck
+HEALTHCHECK CMD curl --fail http://localhost:8000/ || exit 1
